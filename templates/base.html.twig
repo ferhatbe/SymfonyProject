@@ -51,10 +51,16 @@
                                         <a class="dropdown-item" href="{{ path('jibcolis_voirColis') }}">Colis</a>
                                     </div>
                                 </li>
-                                <li class="nav-item  active">
-                                    <a class="nav-link " href="{{ path('jibcolis_connexion') }}">Se Connecter</a>
-
-                                </li>
+                                <!-- test de connection -->
+                                {% if not app.user %}
+                                    <li class="nav-item  active">
+                                        <a class="nav-link " href="{{ path('security_connexion') }}">Se Connecter</a>
+                                    </li>
+                                {% else %}
+                                    <li class="nav-item active">
+                                        <a class="nav-link " href="{{ path('security_logout') }}">Se déconnecter</a>
+                                    </li>
+                                {% endif %}
                             </ul>
                         </div>
                     </div>

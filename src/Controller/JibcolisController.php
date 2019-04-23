@@ -28,12 +28,7 @@ class JibcolisController extends AbstractController
     public function home(){
         return $this->render('jibcolis/home.html.twig');
     }
-    /**
-     * @Route("/jibcolis/connexion", name="jibcolis_connexion")
-     */
-    public function connecte(){
-        return $this->render('jibcolis/seConnecter.html.twig');
-    }
+
     /**
      * @Route("/jibcolis/Comment_Ca_Marche", name="jibcolis_commentCaMarche")
      */
